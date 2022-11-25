@@ -2,13 +2,14 @@
 //якщо аргументів не має - повертати null
 
 function findAverage() {
-  let average;
   let sum = 0;
+  if (arguments.length === 0) {
+    return null;
+  }
   for (let i = 0; i < arguments.length; i++) {
     sum += arguments[i];
-    average = sum / arguments.length;
   }
-  return average;
+  return sum / arguments.length;
 }
 console.log(findAverage(2, 6, 6, 2));
 
